@@ -1,0 +1,49 @@
+.maindiv{
+    // background-color: rgb(94, 122, 122);
+    background-image: linear-gradient(to right, #5A3F37 0%, #2C7744  51%, #5A3F37  100%);
+    overflow: hidden;
+    height: 100%;
+}
+
+mat-card{
+    width: 30%;
+    height: 30%;
+    background-image: linear-gradient(to right, #332f2f 0%, #282424  51%, #2a2323  100%);
+    // background-color: rgb(45, 45, 45);
+    // margin-top: 15%;
+    // margin-left: 35%;
+}
+
+.but{
+    height: 8vh;
+    width: 8vw;
+    font-size: 1vw;
+}
+
+         
+.btn-grad {
+    background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
+    // margin: 10px;
+    // padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    // background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    display: block;
+
+    height: 8vh;
+    width: 8vw;
+    font-size: 1vw;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+
+        

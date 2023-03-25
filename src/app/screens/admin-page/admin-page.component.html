@@ -1,0 +1,28 @@
+
+<div>
+    <mat-toolbar class="toolbar" >
+        <span>Admin Page</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button class="btn-grad"  (click)="addItemDailog()">Add Item</button>
+        <button mat-raised-button class="btn-grad" (click)="bookings()">Bookings</button>
+        <button mat-raised-button class="btn-grad" (click)="logOut()">LogOut<mat-icon>logout</mat-icon></button>
+    </mat-toolbar>
+</div>
+<div class="maindiv">
+    <div class="column" *ngFor="let item of posts" >
+      <mat-card class="card">
+        <div>
+
+            <div class="image-container">
+                <img src="{{item.url}}">
+                <div class="icon-container">
+                    <div class="description">{{item.about}}</div>
+                </div>
+            </div>
+            
+            <p><b>Name : </b>{{item.name}}</p>
+            <p><b>Price : </b>{{item.price}}</p>
+        </div>
+      </mat-card>
+    </div>
+</div>

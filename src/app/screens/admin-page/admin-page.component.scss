@@ -1,0 +1,144 @@
+.maindiv{
+    // background-color: rgb(94, 122, 122);
+    background-image: linear-gradient(to right, #5A3F37 0%, #2C7744  51%, #5A3F37  100%);
+    overflow: hidden;
+    // height: 100%;
+    // overflow: scroll;
+    // overflow-x: hidden;
+}
+
+.toolbar{
+  background-image: linear-gradient(to right, #1c1c85 0%, #164856  51%, #070766  100%);
+  color: #fff;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+img {
+    width: 240px;
+    height: 240px;
+    position: relative;
+}
+
+
+.card {
+    width: 280px;
+    height: 350px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+    margin: 50px;
+    overflow: hidden;
+    background-color: rgb(215, 212, 209);
+    // box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.3);
+    
+    box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.3);
+    // background-color: antiquewhite;
+    background-image: linear-gradient(to right, #e2e9f8 0%, #a4afbe  51%, #e7eefa  100%);
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+
+.aboutbut{
+  position: absolute;
+  top: 0;
+  // left: 100;
+  color: rgb(255, 255, 255);
+  background: rgba(0,0,0,0.6);
+  border-radius: 20px;
+}
+
+.about{
+  position: absolute;
+  background: rgba(0,0,0,0.6);
+  // display: flex;
+  // align-items: center;
+  // justify-self: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+// .about:hover{
+//   opacity: 1;
+// }
+
+
+.image-container {
+  position: relative;
+}
+
+.icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.icon-container:hover {
+  opacity: 1;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+  margin: 10px;
+  padding: 3px 35px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 5px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}

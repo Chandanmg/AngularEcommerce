@@ -1,0 +1,32 @@
+
+<div>
+    <mat-toolbar class="toolbar" >
+        <span>User Page</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button class="btn-grad" (click)="goCart()">Cart  <mat-icon>shop</mat-icon></button>
+        <button mat-raised-button class="btn-grad" (click)="logOut()">LogOut  <mat-icon>logout</mat-icon></button>
+        
+        <!-- <button mat-icon-button color="warn"><mat-icon>shop</mat-icon></button> -->
+    </mat-toolbar>
+</div>
+<div class="maindiv">
+    <div class="column" *ngFor="let item of posts" >
+      <mat-card class="card">
+        <button mat-icon-button class="info-button" (mouseover)="showInfo(item)" (mouseout)="hideInfo()">
+            <mat-icon>info</mat-icon>
+        </button>
+        <div>
+            <div class="image-container">
+                <img src="{{item.url}}">
+                <div class="icon-container" *ngIf="selectedItem === item">
+                    <div class="description">{{item.about}}</div>
+                </div>
+            </div>
+            
+            <p><b>Name : </b>{{item.name}}</p>
+            <p><b>Price : </b>{{item.price}}</p>
+            <button class="addcart" mat-flat-button (click)="addCart(item.name)">Add to Cart</button>
+        </div>
+      </mat-card>
+    </div>
+</div>

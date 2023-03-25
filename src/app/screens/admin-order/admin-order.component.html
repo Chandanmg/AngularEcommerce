@@ -1,0 +1,59 @@
+<div class="container">
+    <mat-toolbar class="toolbar" >
+        <span>Order Summary</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button class="btn-grad" (click)="back()">Back</button>
+        <button mat-raised-button class="btn-grad" (click)="logOut()">LogOut<mat-icon>logout</mat-icon></button>
+        
+    </mat-toolbar>
+
+    <div *ngIf="posts.length !=0" class="background">
+        <div class="card">
+            <mat-card>
+                    <div fxLayout="column">
+                        <table mat-table [dataSource]="dataSource" fxFlex="100%">
+                            <ng-container matColumnDef="sl">
+                                <th mat-header-cell *matHeaderCellDef>Sl No</th>
+                                <td mat-cell *matCellDef="let element; let i= index"> {{ i + 1}} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="image">
+                                <th mat-header-cell *matHeaderCellDef>image</th>
+                                <td mat-cell *matCellDef="let element; let i= index"><img [src]="element.url"/></td>
+                            </ng-container>
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef>Name</th>
+                                <td mat-cell *matCellDef="let element; let i= index"> {{element.name}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="quantity">
+                                <th mat-header-cell *matHeaderCellDef>Quantity</th>
+                                <td mat-cell *matCellDef="let element; let i= index">1</td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="price">
+                                <th mat-header-cell *matHeaderCellDef>Price</th>
+                                <td mat-cell *matCellDef="let element; let i= index"> {{element.price}} </td>
+                            </ng-container>
+
+                            
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                
+                        </table>
+                        <!-- <mat-paginator [pageSizeOptions]="[2, 5]"
+                            showFirstLastButtons 
+                            aria-label="Select page of periodic elements">
+                        </mat-paginator>   -->
+                    </div>
+            </mat-card>
+            <br/>
+        </div>
+    </div>
+
+    <ng-container *ngIf="posts.length == 0">
+        <div class="center">
+            <h2>Your Order List is empty..!</h2>
+            <h3>Wait for some time..</h3>
+        </div>
+    </ng-container>
+</div>
